@@ -45,7 +45,7 @@ jobs:
           command: |
             . ~/venv/bin/activate
             coverage run --source=. manage.py test
-            codecov --token=32001538-3cd0-4fb9-9ca7-a4e98c8d9570
+            codecov --token=${CODECOV_TOKEN}
 
       - store_artifacts:
           path: test-reports
